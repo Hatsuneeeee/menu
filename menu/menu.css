@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Zlu;
+    src: url('./zlu.ttf');
+}
+.input-div {
+    padding-bottom: 10px;
+    font-family: Zlu, serif;
+    font-size: 70px;
+}
+#ps {
+    font-size: 60px;
+}
+html, body {
+    height: 100%;
+}
+body {
+    display: grid;
+    grid-gap: 50px;
+    text-align: center;
+    height: 60%;
+    grid-template-rows: 300px 300px;
+    background-size: 100%;
+	width: 99%;
+	background: url("image/imagerrfd_photo-resizer.ru\ \(1\).jpg");
+	animation: animatedBackground 50s linear infinite;
+	-moz-animation: animatedBackground 50s linear infinite;
+	-webkit-animation: animatedBackground 50s linear infinite;
+ 	-o-animation: animatedBackground 50s linear infinite;
+}
+@-webkit-keyframes animatedBackground {
+    100% {
+        background-position: 1920px 0px;
+    }
+}
+#box {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 150px;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 2.5rem;
+    margin: 50px calc(49% - 150px);
+    /* #box */
+    --borderWidth: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    border-radius: var(--borderWidth);
+    padding: 40px;
+    text-align: center;
+}
+.gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #63237d, #be5189, #7c2e84, #b84d92, #f7e9ba, #e1517a, #fd98d4);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 2.5s ease alternate infinite;
+    background-size: 300% 300%;
+}
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.restart {
+    /* width: 50px; */
+    position: absolute;
+    margin: 28%;
+    margin-top: 65%;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+.img {
+    width: 300px;
+    aspect-ratio: 2.5;
+}
+.img {
+    animation: slidein 3s infinite;
+}
+
+.imgAnimation {
+    margin-top: 60px;
+}
+
+@keyframes slidein {
+    0% {
+        width: 55%;
+    }
+  
+    50% {
+        width: 40%;
+    }
+  
+    100% {
+        width: 55%;
+    }
+}
